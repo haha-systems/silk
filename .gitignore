@@ -1,0 +1,46 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output directories
+/bin/
+/build/
+/dist/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Go specific
+*.out
+*.test
+
+# Dependency directories (vendor/)
+/vendor/
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Coverage files
+coverage.out
+
+# Test binaries
+*.test
+
+# Compiled shared objects
+*.so
