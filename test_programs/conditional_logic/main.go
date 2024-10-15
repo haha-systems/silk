@@ -54,6 +54,10 @@ func main() {
 	}
 
 	// Output the result
-	stateValue := exec.Env()["state"]
-	fmt.Printf("State = %v\n", stateValue)
+	stateValue, err := exec.EnvValue("state")
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Printf("state = %v\n", stateValue)
+	}
 }

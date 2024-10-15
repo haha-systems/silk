@@ -3,13 +3,14 @@ package models
 type NodeType string
 
 const (
-	NodeTypeProgram      NodeType = "Program"
-	NodeTypeNumber       NodeType = "Number"
-	NodeTypeVariable     NodeType = "Variable"
-	NodeTypeBinaryExpr   NodeType = "BinaryExpression"
-	NodeTypeAssignment   NodeType = "Assignment"
-	NodeTypeIf           NodeType = "IfStatement"
-	NodeTypeFunctionCall NodeType = "FunctionCall"
+	NodeTypeProgram         NodeType = "Program"
+	NodeTypeNumber          NodeType = "Number"
+	NodeTypeVariable        NodeType = "Variable"
+	NodeTypeBinaryExpr      NodeType = "BinaryExpression"
+	NodeTypeAssignment      NodeType = "Assignment"
+	NodeTypeIf              NodeType = "IfStatement"
+	NodeTypeFunctionCall    NodeType = "FunctionCall"
+	NodeTypeReturnStatement NodeType = "ReturnStatement"
 )
 
 type Node interface {
@@ -132,4 +133,12 @@ type WhileLoop struct {
 
 func (wl *WhileLoop) GetType() NodeType {
 	return "WhileLoop"
+}
+
+type ReturnStatement struct {
+	Value Node
+}
+
+func (rs *ReturnStatement) GetType() NodeType {
+	return "ReturnStatement"
 }

@@ -46,6 +46,10 @@ func main() {
 	}
 
 	// Output the result
-	zValue := exec.Env()["z"]
-	fmt.Printf("z = %v\n", zValue)
+	zValue, err := exec.EnvValue("z")
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Printf("z = %v\n", zValue)
+	}
 }
